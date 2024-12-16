@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Personal Finance Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/png" href="/static/icong.png">
+    <style>
+        body{background:url(https://www.butlerbranding.com/wp-content/uploads/2019/03/Google-My-Business-Header-BG-2.jpg);
+background-size:cover;
+font-family:Arial; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/log_expense">Log Expense</a></li>
+            <li><a href="/history">Spending History</a></li>
+            <li><a href="/goals">Savings Goals</a></li>
+            <li><a href="/stress_management">Stress Management</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="container">
+        <h1>Welcome, {{ user_name }}</h1>
+        <div class="dashboard">
+            <div class="summary-card">
+                <h3>Total Expenses</h3>
+                <p id="total-expenses">₹{{ total_expenses }}</p>
+            </div>
+            <div class="summary-card">
+                <h3>Remaining Budget</h3>
+                <p id="remaining-budget">₹{{ remaining_budget }}</p>
+            </div>
+            <div class="summary-card">
+                <h3>Savings Goal Progress</h3>
+                <p id="savings-progress">{{ savings_progress }}%</p>
+            </div>
+        </div>
+        <button class="dash" onclick="window.location.href='/log_expense'">Log an Expense</button>
+        <button class="dash" onclick="window.location.href='/history'">View Spending Chart</button>
+    </div>
+
+    <!-- Footer -->
+    <footer >
+        <p>Personal Finance Tracker &copy; 2024</p>
+    </footer>
+</body>
+</html>
