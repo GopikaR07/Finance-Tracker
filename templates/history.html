@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spending History - Personal Finance Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/png" href="/static/icong.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/log_expense">Log Expense</a></li>
+            <li><a href="/history">Spending History</a></li>
+            <li><a href="/goals">Savings Goals</a></li>
+            <li><a href="/stress_management">Stress Management</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Spending History</h1>
+        <canvas id="spendingChart" width="250" height="100"></canvas>
+    </div>
+    <script>
+        const ctx = document.getElementById('spendingChart').getContext('2d');
+        const totals = JSON.parse('{{ totals | tojson }}');
+        const spendingChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Food', 'Travel', 'Shopping', 'Education', 'Other'],
+                datasets: [{
+                    data: totals, 
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                }]
+            }
+        });
+    </script>
+</body>
+</html
