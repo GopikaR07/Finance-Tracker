@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    background:url(https://i.pinimg.com/736x/ac/b2/3f/acb23f0f7be4cdef52396cb4702ab693.jpg);
+background-size:cover;
+font-family:Arial;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+.containerlogin{ max-width:350px;
+    border-radius:20px;
+    margin:auto;
+    background:rgba(0,0,0,0.8);
+    box-sizing:border-box;
+    padding:40px;
+    color:#fff;
+    margin-top:100px;}
+    
+h2{text-align:center; }
+input[type=text],input[type=password],input[type=submit],input[type=email]{width:100%;
+    box-sizing:border-box;
+    padding:12px 5px;
+    background:rgba(0,0,0,0.10);
+    outline:none;
+    border:none;
+    border-bottom:1px dotted #fff;
+    color:#c7b9b9;
+    border-radius:5px;
+    margin:5px;
+    font-weight: bold; }
+
+input[type=submit]:hover{
+    background:#60adde; }
+input[type=number]{width:100%;
+        box-sizing:border-box;
+        padding:12px 5px;
+        background:rgba(0,0,0,0.10);
+        outline:none;
+        border:none;
+        border-bottom:1px dotted #fff;
+        color:#382e2e;
+        border-radius:5px;
+        margin:5px;
+        font-weight: bold; }
+.login{
+    text-align: center;
+    
+
+}    
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Navigation Bar */
+.navbar {
+    background-color: #6b1084;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #45a049;
+}
+
+/* Dashboard */
+.dashboard {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.summary-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.summary-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #8d0594;
+}
+
+.summary-card p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+}
+.dash{
+    background-color: #6b1084;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+/* Buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 300px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
